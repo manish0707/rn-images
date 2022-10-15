@@ -89,6 +89,7 @@ const ImageList = ({navigation}: {navigation: any}) => {
         renderItem={({item: photo}) => {
           return (
             <CustomImage
+              title={photo.title}
               source={{uri: photo.url}}
               onPress={(url: string, imageSpecs: any) => {
                 navigation.navigate('DetailScreen', {uri: url, imageSpecs});

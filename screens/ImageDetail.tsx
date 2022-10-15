@@ -26,7 +26,7 @@ export default function ImageDetail({route, navigation}: any) {
 
   useEffect(() => {
     anim.value = 0;
-    anim.value = withTiming(1, {duration: 500});
+    anim.value = withTiming(1, {duration: 300});
   }, []);
 
   const onClosePress = () => {

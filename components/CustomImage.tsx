@@ -1,12 +1,14 @@
 import React from 'react';
-import {Pressable, Image, Dimensions} from 'react-native';
+import {Pressable, Image, Dimensions, Text} from 'react-native';
 
 export default function CustomImage({
   source,
   onPress,
+  title,
 }: {
   source: any;
   onPress: any;
+  title: string;
 }) {
   const imageRef = React.useRef();
 
@@ -29,6 +31,7 @@ export default function CustomImage({
         source={{uri: source.uri}}
         style={{height: imageSize, width: imageSize}}
       />
+      <Text style={{width: imageSize, marginBottom: 20, marginTop: 5}}>{title}</Text>
     </Pressable>
   );
 }
